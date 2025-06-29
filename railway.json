@@ -1,0 +1,16 @@
+{
+  "build": {
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "v2ray -config /etc/v2ray/config.json"
+  },
+  "services": [
+    {
+      "name": "v2ray",
+      "port": 443,
+      "protocol": "tcp",
+      "healthCheckPath": "/ray"
+    }
+  ]
+}
